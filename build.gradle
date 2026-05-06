@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.dronegcs'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.dronegcs"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.amap.api:3dmap:latest.integration'
+    implementation 'com.google.android.exoplayer:exoplayer:2.20.0'
+    implementation project(':android_serialport_api')
+}
